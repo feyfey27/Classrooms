@@ -13,6 +13,16 @@ urlpatterns = [
     path('classrooms/create', views.classroom_create, name='classroom-create'),
     path('classrooms/<int:classroom_id>/update/', views.classroom_update, name='classroom-update'),
     path('classrooms/<int:classroom_id>/delete/', views.classroom_delete, name='classroom-delete'),
+
+
+    path('classrooms/<int:classroom_id>/student/create', views.student_create, name='student-create'),
+    path('classrooms/<int:classroom_id>/student/<int:student_id>/update/', views.student_update, name='student-update'),
+    path('classrooms/<int:classroom_id>/student/<int:student_id>/delete/', views.student_delete, name='student-delete'),
+
+
+    path('register/',views.Register, name='register'),
+    path('login/',views.Login_view, name='login'),
+    path('logout/',views.Logout_view, name='logout'),
 ]
 
 if settings.DEBUG:
