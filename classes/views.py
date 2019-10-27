@@ -15,7 +15,7 @@ def Register(request):
             user.save()
 
             login(request, user)
-            return redirect("classroom_list")
+            return redirect("classroom-list")
     context = {
         "form":form,
     }
